@@ -3,13 +3,18 @@ bibliography: ../Referencias.bib
 biblio-style: "apalike"
 link-citations: true
 
-title: 'Metodología de la Programación'
-author: 
-- Esther-Lydia Silva-Ramírez  (<esther.silva@uca.es>)
 
 ---
-# <span style='color:blue'> **Nombre del proyecto** </span> 
+# <span style='color:blue'> **Hundir la Flota** </span> 
+### Grado en Ingeniería Informática
 
+**Curso 2024/2025**
+
+**Autores:**
+- Salmoun Vargas, Ibrahim  
+- Duarte Guillén, Alejandro  
+- Domínguez Panal, Juan Manuel  
+- Sánchez Millán, Víctor  
 ***
 
 [comment]:<> "Los tres asteriscos añaden una línea horizontal"
@@ -342,6 +347,25 @@ Se recorrieron condiciones del archivo de configuración:
 
 - **Caja blanca – rutas independientes:**
   ## Pruebas de Caja Blanca – `IntroducirDatos(...)`
+  
+```c
+  void introducirDatos(TConfiguracion *config, TJugador jugadores[], int num_jugadores)
+{
+    int j;
+
+    inicializarConfiguracion(config);
+
+    printf("\n=== CONFIGURACIÓN INICIAL ===\n");
+
+    printf("Introduce la dimensión del tablero (n x n): ");
+    scanf("%d", &config->dimension_tablero);
+
+    if (!leerTiposBarcosDesdeFichero(config, "Barcos.txt")) {
+        printf("Error al cargar tipos de barcos. No se puede continuar.\n");
+        return;
+    }
+}
+````
 
 ### Diagrama de Flujo Lógico
    [Inicio]
@@ -461,14 +485,6 @@ Estas pruebas están orientadas a validar el sistema desde la perspectiva del us
 - La interacción debe mantenerse en todo momento clara y fluida desde la consola.
 
 
-<div id='sistema' />
-# Documentación del código fuente
-
-En este punto se puede incluir toda la documentación interna que puede ser generada con [Doxygen](https://www.doxygen.nl/index.html).
-
-La documentación interna del programa, como se ha comentado anteriormente, comprende los comentarios del programa. Durante la fase de implementación es necesario comentar adecuadamente cada una de las partes del programa. Estos comentarios se incluyen en el código fuente con el objetivo de aclarar qué es lo que hace el fragmento de código, para explicar sus elementos. 
-
-Esta documentación ayuda a hacer más comprensible el código fuente a los programadores que deban trabajar en él, facilitando las tareas de mantenimiento. No sólo proporciona una mayor legibilidad en la actualización y modificación del código, sino también en la depuración del mismo.
 
 <div id='referencias' />
 # Referencias {-}
