@@ -369,13 +369,9 @@ Se recorrieron condiciones del archivo de configuración:
 
 ### Diagrama de Flujo Lógico
   
-flowchart TD
-    A[Inicio] --> B[Inicializar Config]
-    B --> C[Solicitar dimensión]
-    C --> D[leerTiposBarcosDesdeFichero]
-    D -->|falso| E[Mensaje de error]
-    E --> F[Fin]
-    D -->|verdadero| F
+![image](![Diagrama de flujo documentacion](https://github.com/user-attachments/assets/e83f9fc8-5e9c-41e1-b0df-bb9b07294df2)
+)
+
 
 
 ### Complejidad Ciclomática
