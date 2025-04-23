@@ -368,22 +368,15 @@ Se recorrieron condiciones del archivo de configuración:
 ````
 
 ### Diagrama de Flujo Lógico
-   [Inicio]
-      |
-      v
-[Inicializar Config]
-      |
-      v
-[Solicitar dimensión]
-      |
-      v
-[leerTiposBarcosDesdeFichero]
-      |------------------|
-     falso               verdadero
-      |                   |
-[Mensaje de error]     [Fin]
-      |
-    [Fin]
+  
+flowchart TD
+    A[Inicio] --> B[Inicializar Config]
+    B --> C[Solicitar dimensión]
+    C --> D[leerTiposBarcosDesdeFichero]
+    D -->|falso| E[Mensaje de error]
+    E --> F[Fin]
+    D -->|verdadero| F
+
 
 ### Complejidad Ciclomática
 
