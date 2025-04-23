@@ -369,7 +369,8 @@ Se recorrieron condiciones del archivo de configuración:
 
 ### Diagrama de Flujo Lógico
   
-[Diagrama de flujo documentacion](https://github.com/user-attachments/assets/e83f9fc8-5e9c-41e1-b0df-bb9b07294df2)
+![image](![Diagrama de flujo documentacion](https://github.com/user-attachments/assets/e8a42a8d-350b-4557-bfe7-3c19600b0eb8)
+)
 
 
 
