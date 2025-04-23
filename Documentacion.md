@@ -395,26 +395,21 @@ Se muestra mensaje de error y se termina la función
 | 2    | Fichero ausente o ilegible   | Tamaño válido, archivo no existe         | Se imprime error y termina       |
 
 
- 
-
-
-
-
 - **Caja negra – entradas/salidas:**
-  - Entrada `fila=0, col=0` → Resultado: Agua.
-  - Entrada inválida `fila=-1, col=5` → Rechazo.
-  - Casilla ya usada → Rechazo.
-  - Resultado esperado (Agua, Tocado, Hundido) impreso correctamente.
-
+  Función probada: introducirDatos
+  
+Criterio: Verificar entradas válidas e inválidas sin considerar el código fuente.
 ### Tabla de Casos de Prueba 
 
-| Prueba | Descripción                                      | Esperado                                      | Resultado observado         |
-|--------|--------------------------------------------------|-----------------------------------------------|-----------------------------|
-| 1      | Disparo válido en coordenada (0, 0)              | Mostrar 'Agua'                                | Se mostró 'Agua'            |
-| 2      | Disparo fuera de rango: fila = -1, col = 5       | Rechazar entrada, pedir nuevamente            | Se pidió nueva entrada      |
-| 3      | Disparo en casilla ya usada (2,2)                | Rechazar entrada, pedir nuevamente            | Se pidió nueva entrada      |
-| 4      | Disparo al borde inferior derecho (DIM-1, DIM-1) | Mostrar resultado válido (Agua/Tocado)        | Se mostró 'Tocado'          |
-| 5      | Disparo en coordenada con resultado Hundido      | Mostrar 'Hundido'                             | Se mostró 'Hundido'         |
+| Prueba | Descripción                             | Entrada simulada                       | Resultado esperado                          |
+|--------|-----------------------------------------|----------------------------------------|---------------------------------------------|
+| 1      | Dimensión válida, archivo correcto      | 10, archivo "Barcos.txt" válido        | Finaliza sin error                          |
+| 2      | Dimensión 0                             | 0, archivo válido                      | Acepta pero puede provocar errores          |
+| 3      | Entrada no numérica                     | abc, archivo válido                    | scanf falla o se queda en bucle             |
+| 4      | Archivo no existente                    | 10, archivo no existe                  | Muestra error y finaliza                    |
+| 5      | Archivo vacío o corrupto                | 10, archivo sin datos válidos          | Error al cargar y finaliza                  |
+| 6      | Dimensión negativa                      | -5, archivo válido                     | Aceptado o malformado, posible fallo        |
+
 
 ---
 
