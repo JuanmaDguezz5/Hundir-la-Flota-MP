@@ -344,7 +344,7 @@ Se recorrieron condiciones del archivo de configuración:
   ## Pruebas de Caja Blanca – `disparoManual(...)`
 
 ### Diagrama de Flujo Lógico
-![image](https://docs.google.com/document/d/1kaL8J4vnS2co0gFAe4ds29aNMBA5mjXFxuB9ZupRAYs/edit?tab=t.0)
+![image](file:///C:/Users/juanm/Downloads/Diagrama%20de%20flujo%20documentacion%20(1).pdf)
 
 
 - NN = 6 nodos: inicio, lectura, condición, actualizar, imprimir, return
