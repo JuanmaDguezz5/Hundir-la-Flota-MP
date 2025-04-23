@@ -389,10 +389,12 @@ Se muestra mensaje de error y se termina la función
 
 ### Tabla de Casos de Prueba 
 
-| Ruta | Descripción       | Entrada esperada | Resultado                                                                   |
-|--------|----------------------------------|-------------|---------------------------------------------------------------|--------------------------------------------|
-| 1      | Fichero cargado correctamente | Tamaño válido (ej. 10), archivo válido         | Función finaliza sin error     |
-| 2      | Fichero ausente o ilegible   | Tamaño válido, archivo no existe           | Se imprime error y termina |
+| Ruta | Descripción                  | Entrada esperada                         | Resultado                        |
+|------|------------------------------|------------------------------------------|----------------------------------|
+| 1    | Fichero cargado correctamente | Tamaño válido (ej. 10), archivo válido   | Función finaliza sin error       |
+| 2    | Fichero ausente o ilegible   | Tamaño válido, archivo no existe         | Se imprime error y termina       |
+
+
  
 
 
