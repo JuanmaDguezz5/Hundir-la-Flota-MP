@@ -344,13 +344,29 @@ Se recorrieron condiciones del archivo de configuración:
   ## Pruebas de Caja Blanca – `disparoManual(...)`
 
 ### Diagrama de Flujo Lógico
-![image]("C:\Users\juanm\Downloads\Diagrama de flujo documentacion.jpg")
+   [Inicio]
+      |
+      v
+[Inicializar Config]
+      |
+      v
+[Solicitar dimensión]
+      |
+      v
+[leerTiposBarcosDesdeFichero]
+      |------------------|
+     falso               verdadero
+      |                   |
+[Mensaje de error]     [Fin]
+      |
+    [Fin]
 
+### Complejidad Ciclomática
 
-- NN = 6 nodos: inicio, lectura, condición, actualizar, imprimir, return
-- NA = 7 aristas: 1→2, 2→3, 3→2 (repetición), 3→4, 4→5, 5→6, y 3 como predicado
+- NN = 6 nodos 
+- NA= 7 aristas: 1 → 2, 2 → 3, 3 → 4, 4 → 5 (si es falso), 4 → 6 (si es verdadero), 5 → fin, 6 → fin
 - V(G) = NA - NN + 2 = 3
-
+Complejidad ciclomática = 3
   
 ### Tabla de Casos de Prueba 
 
