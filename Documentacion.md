@@ -333,15 +333,15 @@ Se recorrieron condiciones del archivo de configuración:
 
 ## Pruebas individuales (alumno)
 
-**Alumno:** _[Ibrahim Salmoun Vargas]_
+**Alumno:** _[Juan Manuel Domínguez Panal]_
 
-**Función analizada:** `disparoManual(...)`  
+**Función analizada:** `IntroducirDatos(...)`  
 **Tipo de prueba:** Ruta básica (caja blanca) y caja negra.
 
 **Pruebas realizadas:**
 
 - **Caja blanca – rutas independientes:**
-  ## Pruebas de Caja Blanca – `disparoManual(...)`
+  ## Pruebas de Caja Blanca – `IntroducirDatos(...)`
 
 ### Diagrama de Flujo Lógico
    [Inicio]
@@ -367,14 +367,33 @@ Se recorrieron condiciones del archivo de configuración:
 - NA= 7 aristas: 1 → 2, 2 → 3, 3 → 4, 4 → 5 (si es falso), 4 → 6 (si es verdadero), 5 → fin, 6 → fin
 - V(G) = NA - NN + 2 = 3
 Complejidad ciclomática = 3
-  
+
+### Determinar el conjunto básico de rutas linealmente independientes
+Ruta 1: Ejecución exitosa
+
+Se inicializa configuración
+
+Usuario introduce dimensión
+
+Archivo "Barcos.txt" se carga correctamente
+
+Ruta 2: Error al cargar archivo
+
+Se inicializa configuración
+
+Usuario introduce dimensión
+
+Falla la carga de "Barcos.txt"
+
+Se muestra mensaje de error y se termina la función
+
 ### Tabla de Casos de Prueba 
 
-| Prueba | Comportamiento estructural       | Iteraciones | Ejemplo de entrada                                           | Resultado esperado                         |
+| Ruta | Descripción       | Entrada esperada | Resultado                                                                   |
 |--------|----------------------------------|-------------|---------------------------------------------------------------|--------------------------------------------|
-| 1      | Entrada válida al primer intento | 1           | `fila = 2`, `col = 3` → Casilla VACÍA y dentro de rango      | Se realiza disparo, imprime resultado      |
-| 2      | Entrada inválida, luego válida   | 2           | `fila = -1`, `col = 2` → `fila = 3`, `col = 3`   | Repite una vez, luego dispara correctamente |
-| 3      | Múltiples entradas inválidas     | ≥3          | `fila = 10`, `col = -1` → `fila = -1`, `col = 10` → luego válido | Repite varias veces hasta disparo válido   |
+| 1      | Fichero cargado correctamente | Tamaño válido (ej. 10), archivo válido         | Función finaliza sin error     |
+| 2      | Fichero ausente o ilegible   | Tamaño válido, archivo no existe           | Se imprime error y termina |
+ 
 
 
 
